@@ -1,0 +1,57 @@
+/* In your main CSS file (e.g., index.css or App.css) */
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bartle&family=BBH+Hegarty&family=Saira:ital,wght@0,100..900;1,100..900&family=Sekuya&display=swap');
+
+@import "tailwindcss";
+
+* {
+  font-family: 'Saira', sans-serif;
+}
+
+/* Blob animation */
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(20px, -20px) scale(1.1);
+  }
+  50% {
+    transform: translate(0, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(-20px, -20px) scale(1.1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+/* Float animation for skill cards */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-10px); 
+  }
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+.float-animation:nth-child(odd) {
+  animation-delay: 0.5s;
+}
+
+.float-animation:nth-child(even) {
+  animation-delay: 1s;
+}
+
+/* Skills background gradient */
+
+
+.clip-path-custom {
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+}
